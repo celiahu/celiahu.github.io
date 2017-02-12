@@ -5,13 +5,7 @@
 <head>
 <title>celia动画小demo</title>
 <script type="text/javascript">
-	var w = document.documentElement.clientWidth || document.body.clientWidth;
-	document.documentElement.style.fontSize = (w/750*20)+"px";		
-	window.onresize = function()
-	{
-		var w = document.documentElement.clientWidth || document.body.clientWidth;
-		document.documentElement.style.fontSize = (w/750*20)+"px";
-	}
+	
 </script>
 <style type="text/css">
 body,html{ margin: 0px; padding: 0;background-color: #FFF;overflow: hidden;width: 100%; height: 100%;}
@@ -168,9 +162,17 @@ animation-name: shake-slow;
 </div>
 
 <script type="text/javascript">
-//判断 当宽度大于高度
+
 var updateOrientation = function() {
+      var w = document.documentElement.clientWidth || document.body.clientWidth;
+      document.documentElement.style.fontSize = (w/750*20)+"px";    
+      window.onresize = function()
+      {
+        var w = document.documentElement.clientWidth || document.body.clientWidth;
+        document.documentElement.style.fontSize = (w/750*20)+"px";
+      }
       var forland = document.getElementById("forland");
+      //判断 当宽度大于高度
      if(window.innerWidth > window.innerHeight){
         forland.style.display="block";
       }else{
