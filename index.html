@@ -16,6 +16,7 @@ ul,ol,h1,h2,h3,h4,h5,h6,dl,dd,form,p{margin: 0px; padding: 0px;}
 background: #cceeff; 
 background: -moz-linear-gradient(top, white,#cceeff,white); 
 background: -webkit-linear-gradient(top, white,#cceeff,white);
+background: -o-linear-gradient(top, white,#cceeff,white);
 }
 .bg-box .bg{background: url(img/bg1.png) 0 0 no-repeat;background-size:37.5rem 16.2rem;width: 37.5rem;height: 16.2rem;
 	position: absolute;
@@ -26,10 +27,15 @@ background: -webkit-linear-gradient(top, white,#cceeff,white);
 .bg-box .ball{background: url(img/ball.png) 0 0 no-repeat;background-size:13.2rem 17.5rem;width:13.2rem;height: 17.5rem;
 	position: absolute;top: 0;left: 0;z-index: 5;
 	transform-origin: center bottom; 
-  animation-name: shake-slow;
-  animation-duration: 10s;
-  animation-timing-function: ease-in-out;
-  animation-iteration-count: infinite;
+  -webkit-transform-origin: center bottom; 
+  -moz-transform-origin: center bottom;
+  -o-transform-origin: center bottom;
+  -ms-transform-origin: center bottom;
+  animation: shake-slow 10s linear infinite;
+  -webkit-animation: shake-slow 10s linear infinite;
+  -moz-animation: shake-slow 10s linear infinite;
+  -o-animation: shake-slow 10s linear infinite;
+  -ms-animation: shake-slow 10s linear infinite;
 }
 .bg-box .ball:before{content:" ";background: url(img/ballbox.png) 0 0 no-repeat;background-size:5.8rem 6.1rem;width: 5.8rem;height: 6.1rem;
   position: absolute;
@@ -37,25 +43,28 @@ background: -webkit-linear-gradient(top, white,#cceeff,white);
 .bg-box .ball-top{background: url(img/boxtop.png) 0 0 no-repeat;background-size:5rem 1.2rem;width: 5rem;height: 1.2rem;
 	position: absolute;
 	top:17rem;left:5rem;z-index: 1;
-animation-name: shake-slow;
-  animation-duration: 10s;
-  animation-timing-function: ease-in-out;
-  animation-iteration-count: infinite;
+  animation: shake-slow 10s linear infinite;
+  -webkit-animation: shake-slow 10s linear infinite;
+  -moz-animation: shake-slow 10s linear infinite;
+  -ms-animation: shake-slow 10s linear infinite;
+  -o-animation: shake-slow 10s linear infinite;
 }
 .bg-box .place{
 	width: 13.2rem;height: 19.3rem;position: absolute;top: 8rem;left: 8.3rem;z-index: 5;
-	transition:transform 5s;
 	-wekit-transition:transform 5s;
-	transform-origin:50% 50%;
+  -moz-transition:transform 5s;
+  -o-transition:transform 5s;
+  -ms-transition:transform 5s;
+    transition:transform 5s;
 }
 .bg-box .girl{
   background: url(img/girl.png) 0 0 no-repeat;background-size:6.5rem 6.8rem;width:6.5rem;height: 6.8rem;
   position: absolute;top:12.2rem;left: 4rem;z-index: 2;
-  transform-origin: center center; 
-  animation-name: shake-little;
-  animation-duration: 3s;
-  animation-timing-function: ease-in-out;
-  animation-iteration-count: infinite;
+  animation: shake-little 3s linear infinite;
+  -webkit-animation: shake-little 3s linear infinite;
+  -moz-animation: shake-little 3s linear infinite;
+  -o-animation: shake-little 3s linear infinite;
+   -ms-animation: shake-little 3s linear infinite;
 }
 .content{
   text-shadow:0.1rem 0.1rem 0.5rem #000;color: #cceeff;font-weight: bold;
@@ -75,6 +84,7 @@ animation-name: shake-slow;
   -moz-animation: ani-colud 25s infinite linear 7s;
   -webkit-animation: ani-colud 25s infinite linear 7s;
   -o-animation: ani-colud 25s infinite linear 7s;
+  -ms-animation: ani-colud 25s infinite linear 7s;
 }
 .cloud2{
   background: url(img/cloud.png) 0 0 no-repeat;background-size:11.2rem 6.8rem;width: 11.2rem;height: 6.8rem;
@@ -83,6 +93,7 @@ animation-name: shake-slow;
   -moz-animation: ani-colud 30s infinite linear;
   -webkit-animation: ani-colud 30s infinite linear;
   -o-animation: ani-colud 30s infinite linear;
+   -ms-animation: ani-colud 30s infinite linear;
 }
 .cloud3{
   background: url(img/cloud.png) 0 0 no-repeat;background-size:14rem 9rem;width: 14rem;height: 9rem;
@@ -91,6 +102,7 @@ animation-name: shake-slow;
   -moz-animation: ani-colud 27s infinite 7s linear;
   -webkit-animation: ani-colud 27s infinite 7s linear;
   -o-animation: ani-colud 27s infinite 7s linear;
+  -ms-animation: ani-colud 27s infinite 7s linear;
 }
 .cloud4{
   background: url(img/cloud.png) 0 0 no-repeat;background-size:12rem 8rem;width: 12rem;height: 8rem;
@@ -99,6 +111,43 @@ animation-name: shake-slow;
   -moz-animation: ani-colud 30s infinite 12s linear;
   -webkit-animation: ani-colud 30s infinite 12s linear;
   -o-animation: ani-colud 30s infinite 12s linear;
+  -ms-animation: ani-colud 30s infinite 12s linear;
+}
+@-moz-keyframes ani-colud{
+  0% {transform:translate(0, 0)}
+  10% {transform:translate(1rem, -7.4rem)}
+  20% {transform:translate(7rem, -14.4rem)}
+  30% {transform:translate(14rem, -21.9rem)}
+  50% {transform:translate(21rem, -43.4rem)}
+  80% {transform:translate(35rem, -56.6rem)}
+  100% {transform:translate(42rem, -61.1rem)}
+}
+@-webkit-keyframes ani-colud{
+  0% {transform:translate(0, 0)}
+  10% {transform:translate(1rem, -7.4rem)}
+  20% {transform:translate(7rem, -14.4rem)}
+  30% {transform:translate(14rem, -21.9rem)}
+  50% {transform:translate(21rem, -43.4rem)}
+  80% {transform:translate(35rem, -56.6rem)}
+  100% {transform:translate(42rem, -61.1rem)}
+}
+@-ms-keyframes ani-colud{
+  0% {transform:translate(0, 0)}
+  10% {transform:translate(1rem, -7.4rem)}
+  20% {transform:translate(7rem, -14.4rem)}
+  30% {transform:translate(14rem, -21.9rem)}
+  50% {transform:translate(21rem, -43.4rem)}
+  80% {transform:translate(35rem, -56.6rem)}
+  100% {transform:translate(42rem, -61.1rem)}
+}
+@-o-keyframes ani-colud{
+  0% {transform:translate(0, 0)}
+  10% {transform:translate(1rem, -7.4rem)}
+  20% {transform:translate(7rem, -14.4rem)}
+  30% {transform:translate(14rem, -21.9rem)}
+  50% {transform:translate(21rem, -43.4rem)}
+  80% {transform:translate(35rem, -56.6rem)}
+  100% {transform:translate(42rem, -61.1rem)}
 }
 @keyframes ani-colud{
   0% {transform:translate(0, 0)}
@@ -109,6 +158,46 @@ animation-name: shake-slow;
   80% {transform:translate(35rem, -56.6rem)}
   100% {transform:translate(42rem, -61.1rem)}
 }
+@-webkit-keyframes shake-little {
+  25% {
+    transform: rotate(3deg); }
+  50% {
+    transform:rotate(0); }
+  75% {
+    transform:rotate(-3deg); }
+  0%, 100% {
+    transform:rotate(0); } 
+  }
+  @-moz-keyframes shake-little {
+  25% {
+    transform: rotate(3deg); }
+  50% {
+    transform:rotate(0); }
+  75% {
+    transform:rotate(-3deg); }
+  0%, 100% {
+    transform:rotate(0); } 
+  }
+    @-o-keyframes shake-little {
+  25% {
+    transform: rotate(3deg); }
+  50% {
+    transform:rotate(0); }
+  75% {
+    transform:rotate(-3deg); }
+  0%, 100% {
+    transform:rotate(0); } 
+  }
+      @-ms-keyframes shake-little {
+  25% {
+    transform: rotate(3deg); }
+  50% {
+    transform:rotate(0); }
+  75% {
+    transform:rotate(-3deg); }
+  0%, 100% {
+    transform:rotate(0); } 
+  }
 @keyframes shake-little {
   25% {
     transform: rotate(3deg); }
@@ -117,8 +206,72 @@ animation-name: shake-slow;
   75% {
     transform:rotate(-3deg); }
   0%, 100% {
-    transform:rotate(0); } }
-
+    transform:rotate(0); } 
+  }
+@-webkit-keyframes shake-slow {
+  15% {
+    transform: translate(0, 0.3rem) rotate(2.5deg); }
+  30% {
+    transform: translate(-0.2rem, 0.3rem) rotate(1.5deg); }
+  45% {
+    transform: translate(-0.5rem, -0.2rem) rotate(3.5deg); }
+  60% {
+    transform: translate(0.4rem, 0.3rem) rotate(-0.5deg); }
+  75% {
+    transform: translate(-0.4rem, -0.4rem) rotate(-0.5deg); }
+  90% {
+    transform: translate(0.5rem, 0.3rem) rotate(0.5deg); }
+  0%, 100% {
+    transform: translate(0, 0) rotate(0); }
+  }
+  @-moz-keyframes shake-slow {
+  15% {
+    transform: translate(0, 0.3rem) rotate(2.5deg); }
+  30% {
+    transform: translate(-0.2rem, 0.3rem) rotate(1.5deg); }
+  45% {
+    transform: translate(-0.5rem, -0.2rem) rotate(3.5deg); }
+  60% {
+    transform: translate(0.4rem, 0.3rem) rotate(-0.5deg); }
+  75% {
+    transform: translate(-0.4rem, -0.4rem) rotate(-0.5deg); }
+  90% {
+    transform: translate(0.5rem, 0.3rem) rotate(0.5deg); }
+  0%, 100% {
+    transform: translate(0, 0) rotate(0); }
+  }
+    @-o-keyframes shake-slow {
+  15% {
+    transform: translate(0, 0.3rem) rotate(2.5deg); }
+  30% {
+    transform: translate(-0.2rem, 0.3rem) rotate(1.5deg); }
+  45% {
+    transform: translate(-0.5rem, -0.2rem) rotate(3.5deg); }
+  60% {
+    transform: translate(0.4rem, 0.3rem) rotate(-0.5deg); }
+  75% {
+    transform: translate(-0.4rem, -0.4rem) rotate(-0.5deg); }
+  90% {
+    transform: translate(0.5rem, 0.3rem) rotate(0.5deg); }
+  0%, 100% {
+    transform: translate(0, 0) rotate(0); }
+  }
+    @-ms-keyframes shake-slow {
+  15% {
+    transform: translate(0, 0.3rem) rotate(2.5deg); }
+  30% {
+    transform: translate(-0.2rem, 0.3rem) rotate(1.5deg); }
+  45% {
+    transform: translate(-0.5rem, -0.2rem) rotate(3.5deg); }
+  60% {
+    transform: translate(0.4rem, 0.3rem) rotate(-0.5deg); }
+  75% {
+    transform: translate(-0.4rem, -0.4rem) rotate(-0.5deg); }
+  90% {
+    transform: translate(0.5rem, 0.3rem) rotate(0.5deg); }
+  0%, 100% {
+    transform: translate(0, 0) rotate(0); }
+  }
 @keyframes shake-slow {
   15% {
     transform: translate(0, 0.3rem) rotate(2.5deg); }
@@ -133,7 +286,8 @@ animation-name: shake-slow;
   90% {
     transform: translate(0.5rem, 0.3rem) rotate(0.5deg); }
   0%, 100% {
-    transform: translate(0, 0) rotate(0); } }
+    transform: translate(0, 0) rotate(0); }
+  }
 
 
 </style>
